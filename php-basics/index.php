@@ -102,7 +102,7 @@ include_once "php-function.php";
 <?php
 require_once "php-loop.php";
 require_once "php-array.php";
-
+require_once "php-array-method.php";
 
 
 
