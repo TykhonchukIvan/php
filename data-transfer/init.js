@@ -5,7 +5,6 @@ class Modal {
         this._formPOST = document.getElementById('formPOST');
         this._formGET = document.getElementById('formGET');
     }
-
     castlingForm = () => {
         this._btnPost.addEventListener("click", (e)=>{
             e.preventDefault();
@@ -22,7 +21,6 @@ class Modal {
             this._formGET.style.display = 'block';
         });
     }
-
 }
 
 const init = () => {
