@@ -1,28 +1,27 @@
 <?php
-function method_login_POST()
+
+function data_transfer_POST()
 {
-    $login = "";
-    if(isset($_POST['login'])){
-        $login = strip_tags($_POST['login']);
-    }
-    echo "<div class='answer'>$login</div>";
-};
 
-function method_password_POST(){
-    $password = "";
-    if(isset($_POST['password'])){
-        $password = strip_tags($_POST['password']);
-    }
-    echo "<div class='answer'>$password</div>";
-};
+    $data = $_POST;
 
-function method_name_POST(){
-    $name = "";
-    if(isset($_POST['name'])){
-        $name = strip_tags($_POST['name']);
-    }
-    echo "<div class='answer'>$name</div>";
-};
+    $user_data = array();
 
+    foreach ($data as $key => $value) {
+        if ($key === 'login'){
+            array_push($user_data, $value);
+        } elseif ($key === 'password') {
+            array_push($user_data, $value);
+        } elseif ($key === 'name') {
+            array_push($user_data, $value);
+        } elseif ($key === 'course') {
+            array_push($user_data, $value);
+        }
+    }
+
+    for ($i = 0; $i < count($user_data); $i++) {
+        echo "<div class='answer'>$user_data[$i]</div>";
+    }
+}
 
 ?>
