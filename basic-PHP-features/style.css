@@ -17,14 +17,25 @@ body{
 }
 .form-area__text{
     resize: none;
+    height: 50px;
+    margin: 5px;
 }
 .form-area__btn{
     background-color:#0C202E;
     color: #ff8600;
     border: 0;
+    padding: 10px;
+    margin: 10px auto;
+    text-transform: uppercase;
+    max-width: 100px;
+    cursor: pointer;
 }
 .section-answer{
+    display: flex;
+    flex-direction: column;
     background-color: #263845;
     max-width: 500px;
-    height: 100px;
+    padding: 10px;
+    max-height: 100px;
+    border-top: 1px solid #ff8600;
 }
