@@ -19,8 +19,8 @@
     </div>
     <div class="section-answer">
         <?php include "./php/processing-form-POST.php";
-//        echo_text($srt_text);
-//        echo_name($srt_name);
+        echo_text($srt_text);
+        echo_name($srt_name);
         ?>
     </div>
     <div class="section-answer">

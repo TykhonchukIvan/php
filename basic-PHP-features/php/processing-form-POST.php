@@ -39,6 +39,7 @@ function work_on_string($str, $str1)
         $position = strpos($str, $str1);
 
         if ($position !== false) {
+
             echo "<div>Позиция подстроки '$str1' в строке '$str': $position</div>";
         } else {
             echo "<div>Подстрока '$str1' в строке '$str' отсутсвует</div>";
@@ -46,12 +47,16 @@ function work_on_string($str, $str1)
 
         $str2 = trim($str);
         echo "<div>$str2</div>";
+
         $str3 = strtolower($str2);
         echo "<div>$str3</div>";
 
         $str4 = strlen($str);
         echo "<div>$str4</div>";
+
         $str5 = strlen($str1);
         echo "<div>$str5</div>";
     }
 }
+
+
