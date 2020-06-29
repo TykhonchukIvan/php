@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="style/style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="modal-wrapper" id="loginAdmin">
+    <div class="wrapper-content">
+        <form class="modal-content" id="formAdmLogin">
+            <div>
+                <div class="close" id="adnModalClose"></div>
+            </div>
+            <label id="admName">Name</label>
+            <input type="text" name="name" id="admNameValue"/>
+            <label id="admLogin">Login</label>
+            <input type="text" name="login" id="admLoginValue"/>
+            <label id="admPassword">Password</label>
+            <input type="password" name="password" id="admPasswordValue"/>
+            <div class="modalBtn" id="loginBtnAdm">log-in now</div>
+        </form>
+    </div>
+</div>
+
+<div class="modal-wrapper" id="thankYouOrder">
+    <div class="wrapper-content">
+        <div class="modal-content">
+            <div>
+                <div class="close" id="thankYouOrderClose"></div>
+            </div>
+            <p>Thank for you order!</p>
+            <p>Activation key has been sent to your email address</p>
+            <div class="modalBtn" id="thankYouOrderBtn"> Keep choosing</div>
+        </div>
+    </div>
+</div>
+
+<div class="modal-wrapper" id="createAccountWrapper">
+    <div class="wrapper-content">
+        <form class="modal-content" id="formUserRegister">
+            <div>
+                <div class="close" id="createAccountClose"></div>
+            </div>
+            <label>Name</label>
+            <input name="name">
+            <label>Surname</label>
+            <input name="surname">
+            <label>Login</label>
+            <input name="login">
+            <label>Email</label>
+            <input name="email">
+            <label>Password</label>
+            <input name="password">
+            <div class="modalBtn" id="createAccountBtn"> Create account</div>
+        </form>
+    </div>
+</div>
+
+<div class="header">
+    <div class="mobile-menu-wrapper">
+        <div class="mobile-menu-btn">
+            <div class="btn-burger" id="mobileMenu">
+                <span></span>
+            </div>
+            <div class="close" id="mobileMenuClose"></div>
+        </div>
+    </div>
+    <div class="menu-wrapper" id="menuWrapper">
+        <ul class="menu">
+            <li>Game Store</li>
+            <li>Gaming equipment</li>
+            <li>game news</li>
+            <li>my account</li>
+        </ul>
+        <div class="burger-menu-wrapper">
+            <div class="btn-burger" id="btnBurger">
+                <span></span>
+            </div>
+            <ul class="burger-menu" id="burgerMenu">
+                <li id="createAccountModalBtn">Create account</li>
+                <li id="loginUserBtn">Sing in</li>
+                <li id="admModalBtn">Administrator</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<div class="content">
+    <div class="section" id="sectionOne">
+        <div class="section-left">
+            <img src="/uploads/image/starcraft_PNG81.png" alt="" class="section-left">
+        </div>
+        <div class="section-right" id="sectionOneRight">
+            <div class="name-block-text">new games on the portal</div>
+        </div>
+    </div>
+    <div class="section" id="sectionTwo">
+        <div class="section-two_left">
+            <div class="section-two_form">
+                <div class="name-block-text">order a game</div>
+                <form class="form-buy" id="formBuy">
+                    <label id="labelName">Name</label>
+                    <input type="text" name="name" id="nameInpValue"/>
+                    <label id="labelSurname">Surname</label>
+                    <input type="text" name="surname" id="surnameInpValue"/>
+                    <label id="labelEmail">Email</label>
+                    <input type="text" name="email" id="emailInpValue"/>
+                    <label id="labelGame">Game</label>
+                    <input type="text" name="game" id="gameInpValue"/>
+                </form>
+                <div class="game-btn" id="btnSelectGame">Select Top 5 Game</div>
+                <div class="select-game-list" id="selectGameList">
+                    <div class="close" id="selectGameListClose"></div>
+                    <ul class="select-game">
+                        <li id="gameOne">Destiny 2</li>
+                        <li id="gameTwo">Indivisible</li>
+                        <li id="gameThree">MISTOVER</li>
+                        <li id="gameFour">Chernobylite</li>
+                        <li id="gameFive">Autonauts</li>
+                    </ul>
+                </div>
+                <div class="bay-btn" id="btnBay">Buy Now</div>
+            </div>
+        </div>
+        <div class="section-two_right">
+            <img src="/uploads/image/warcraft.png" alt="" class="section-two_right">
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+
+</div>
+
+
+<script src="js/drawing-game-list.js"></script>
+<script src="js/rest-form-server.js"></script>
+<script src="js/show-modal-window.js"></script>
+<script src="js/validation-form.js"></script>
+<script src="js/init.js"></script>
+</body>
+</html>
