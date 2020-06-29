@@ -1,5 +1,5 @@
 body{
-    background-color:#0C202E ;
+    background-color:#0C202E;
     padding: 0;
     margin: 0;
 }
@@ -92,9 +92,6 @@ p{
     padding: 10px 0;
     max-width: 400px;
     background-color:#142836;
-}
-.comment-post{
-
 }
 .comment-container{
     display: flex;
