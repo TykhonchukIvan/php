@@ -1,0 +1,540 @@
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.header {
+    background-color: #0C202E;
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-menu-wrapper{
+    display: none;
+}
+
+.menu-wrapper{
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu li {
+    margin-right: 20px;
+    list-style: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: white;
+    font-size: 16px;
+    border-bottom: 2px solid white;
+    transition: .5s;
+}
+
+.menu li:hover{
+    border-bottom: 2px solid #ff8600;
+}
+
+.burger-menu-wrapper{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.btn-burger{
+    display: flex;
+    justify-content: flex-end;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    cursor: pointer;
+}
+
+.btn-burger span,
+.btn-burger span::before,
+.btn-burger span::after{
+    position: absolute;
+    margin-top: -1px;
+    margin-left: -10px;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 2px;
+    background-color: white;
+}
+
+.btn-burger span::before,
+.btn-burger span::after{
+    content: '';
+    display: block;
+    transition: 0.1s;
+}
+
+.btn-burger span::before{
+    transform: translateY(-5px);
+}
+
+.btn-burger span::after{
+    transform: translateY(5px);
+}
+
+.btn-burger_active span{
+    height: 0;
+}
+
+.btn-burger_active span::before{
+    transform: rotate(45deg);
+}
+.btn-burger_active span::after{
+    transform: rotate(-45deg);
+}
+
+.burger-menu{
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    transition: 0.4s;
+    transform-origin: left center;
+    transform: scaleX(0) translateX(20%);
+    opacity: 1;
+}
+
+.burger-menu_active{
+    transform: scaleX(1) translateX(0%);
+    opacity: 1;
+}
+
+.burger-menu li{
+    padding: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: normal;
+    color: white;
+    font-size: 15px;
+    list-style: none;
+    cursor: pointer;
+    border: 1px solid white;
+    transition: .2s;
+}
+.burger-menu li:nth-child(2){
+    margin: 5px 0;
+}
+
+.burger-menu li:hover {
+    box-shadow: 2px 2px 2px #ffffff;
+}
+#mobileMenu {
+    display: none;
+}
+                                                /*modal window*/
+
+.modal-wrapper {
+    display: none;
+    z-index: 1;
+}
+
+.wrapper-content{
+    position: fixed;
+    background-color: #0C202E;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content{
+    padding: 10px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    width: 100%;
+    transition: .3s;
+}
+
+.modal-content p:nth-child(2){
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 700;
+    color: #0C202E;
+    margin: 0 0 10px 0;
+}
+
+.modal-content p:nth-child(3){
+    text-align: center;
+    font-size: 18px;
+    padding: 0 50px;
+    margin: 0 0 10px 0;
+    color: #0C202E;
+}
+
+.modal-content label {
+    margin-top: 5px;
+    font-size: 18px;
+}
+
+.modal-content input {
+    text-align: center;
+    font-size: 18px;
+    border: 0;
+    background-color: #0b2e3d;
+    padding: 5px;
+    color: #ff8600;
+}
+
+.modal-content:hover {
+    box-shadow: 2px 2px 2px #ffffff;
+}
+
+.modalBtn {
+    user-select: none;
+    margin: 10px auto;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: 1px solid black;
+    transition: .5s;
+}
+
+.modalBtn:hover {
+    box-shadow: 2px 2px 2px #0C202E;
+}
+
+                                              /*Content*/
+
+.content {
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.section-left {
+    max-width: 465px;
+    width: 100%;
+    max-height: 260px;
+}
+
+.section-right {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    width: 100%
+}
+
+.name-block-text{
+    padding: 5px 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 18px;
+    color:  #0C202E;
+    user-select: none;
+}
+
+.list-games-section {
+    display: flex;
+    justify-content: space-around;
+}
+
+.game-section {
+    margin: 10px;
+    max-width: 180px;
+    border: 1px solid #0C202E;
+    transition: .3s;
+}
+
+.game-section:hover {
+    box-shadow: 2px 2px 2px #0C202E;
+}
+
+.game-section img {
+    max-width: 180px;
+}
+
+.game-section__btn {
+    user-select: none;
+    margin: 10px auto;
+    max-width: 120px;
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    border: 1px solid #0C202E;
+    color: #0C202E;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.game-section__btn:hover {
+    box-shadow: 2px 2px 2px #0C202E;
+    cursor: pointer;
+}
+
+.section-two_left {
+    display: flex;
+    align-items: center;
+    max-width: 500px;
+    width: 100%;
+}
+
+.section-two_form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    width: 100%;
+}
+
+.form-buy {
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    max-width: 400px;
+    width: 100%;
+}
+
+.form-buy label {
+    margin-top: 5px;
+    font-size: 18px;
+}
+
+.form-buy input {
+    text-align: center;
+    font-size: 18px;
+    border: 0;
+    background-color: #0b2e3d;
+    padding: 5px;
+    color: #ff8600;
+}
+
+.game-btn {
+    user-select: none;
+    margin: 10px auto;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: 1px solid black;
+    transition: .7s;
+}
+
+.game-btn:hover {
+    box-shadow: 2px 2px 2px #0C202E;
+}
+
+.select-game-list {
+    display: none;
+    margin: 0 auto;
+    max-width: 400px;
+    width: 100%;
+}
+
+.close {
+    float: right;
+    max-width: 25px;
+    width: 100%;
+    height: 25px;
+    background-image: url("/uploads/image/close.png");
+    background-size: cover;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.close:hover {
+    transform: rotate(360deg);
+}
+
+.select-game-list ul {
+    padding: 0;
+}
+
+.select-game-list ul li {
+    list-style: none;
+    cursor: pointer;
+    margin-top: 5px;
+    user-select: none;
+}
+
+.select-game-list ul li:hover {
+    color: #ff8600;
+}
+
+.bay-btn {
+    user-select: none;
+    margin: 10px auto;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: 1px solid black;
+    transition: .5s;
+}
+
+.bay-btn:hover {
+    box-shadow: 2px 2px 2px #0C202E;
+}
+
+.section-two_right {
+    max-height: 512px;
+    max-width: 448px;
+    width: 100%;
+}
+
+.footer {
+    background-color: #0C202E;
+    padding: 10px 0;
+}
+
+@media screen and (max-width: 1065px) {
+
+    .section {
+        display: flex;
+        flex-direction: column;
+    }
+    #sectionTwo {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .section-two_right {
+        margin: 0 auto;
+    }
+    .section-two_left {
+        margin: 0 auto;
+    }
+    .form-buy {
+        max-width: 500px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 760px) {
+
+    .select-game-list{
+        width: 90%;
+    }
+
+    .mobile-menu-wrapper{
+        display: block;
+    }
+
+    .mobile-menu-btn{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .menu-wrapper{
+        display: none;
+        flex-direction: column;
+        padding-bottom: 10px;
+    }
+    .menu{
+        margin: 0;
+        flex-direction: column;
+        align-items: self-end;
+    }
+    .burger-menu-wrapper{
+        padding-left: 40px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: end;
+        margin: 0;
+    }
+    #mobileMenu {
+        display: block;
+    }
+    #btnBurger{
+        display: none;
+    }
+    .burger-menu{
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        transform: scaleX(1) translateX(0%);
+        opacity: 1;
+    }
+    .burger-menu li{
+        padding: 0;
+        text-transform: uppercase;
+        text-align: start;
+        font-weight: normal;
+        color: white;
+        font-size: 15px;
+        list-style: none;
+        cursor: pointer;
+        border: 0;
+        margin: 5px 0;
+    }
+    .burger-menu li:nth-child(2){
+        margin: 5px 0;
+    }
+    .menu li {
+        list-style: none;
+        cursor: pointer;
+        text-transform: uppercase;
+        font-weight: 400;
+        color: white;
+        font-size: 15px;
+        border: 0;
+        transition: .5s;
+        margin: 5px 0;
+    }
+    .burger-menu li:hover {
+        box-shadow: 0 0 0;
+        color: #ff8600;
+    }
+    .menu li:hover{
+        border: 0;
+        color: #ff8600;
+    }
+}
+
+@media screen and (max-width: 610px) {
+
+    .list-games-section {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .list-games-section {
+        margin: 10px auto;
+    }
+    .form-buy{
+        width: 90%;
+    }
+    .game-btn{
+        width: 90%;
+    }
+    .bay-btn{
+        width: 90%;
+    }
+    .game-section{
+        max-width: 250px;
+    }
+    .game-section img {
+        max-width: 250px;
+    }
+}
